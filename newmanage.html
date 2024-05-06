@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/newmanage.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Manage site-Scrapius</title>
+</head>
+<body>
+    
+    <div class="main--content">
+        <div class="header">
+            <div class="logo">
+                <h1>Scra<span>Pius</span></h1>
+            </div>
+            <div class="user-profile">
+                <img src="{{ url_for('static', filename='img/profile-icon.png') }}" alt="Your Image" id="userImage">
+                <div class="dropdown" id="dropdown">
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#" id="logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <div class="containers">
+            <div class="container">
+                <h3>Manage Site</h3><br>
+                <form action="/addSite" method="post" id="manage">
+                    <div class="details"></div>
+                    
+                        <div class="tag1">
+                            <div class="url">
+                                <input type="url" name="url" id="url" placeholder="Enter url" required>
+                            </div>
+                            
+                        </div><br>
+                        <div class="tag1" >
+                            <input type="text" placeholder="Enter Parent tag schema" id="tag1" name="parent">
+                        </div><br>
+                    
+                        <div class="tag1">
+                            <input type="text" placeholder="Enter Heading tag schema" id="tag2" name="heading">
+                        </div><br>
+                    
+                        <div class="tag1">
+                            <input type="text" placeholder="Enter Description tag schema" id="tag3" name="desc">
+                        </div><br>
+                        <div class="tag1">
+                            <input type="text" placeholder="Enter Image tag schema" id="tag4" name="img">
+                        </div><br>
+                        <div class="tag1">
+                            <input type="text" placeholder="Enter Link tag schema" id="tag5" name="link">
+                        </div><br>
+                        <div class="button">
+                            <button class="btn" type="submit">Add Site</button>
+                            <button class="btn" id="testSiteBtn" type="button">Test Site</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            <div class="container2">
+                <h3>Test response</h3><br>
+                <p id="myTestResponseText"> </p>
+            </div>
+        </div>
+        <div class="instructions">
+    <h3>Instructions for Site Usage</h3>
+    <ul>
+        <li>1. Only copy the element you need to get scraped</li>
+        <li>2. Make sure parent element must contains class or id attribute.</li>
+        <li>3. It will be best practice, if all elements contains claas or id attributes. It's not necessary for all elements except parent</li>
+        <li>4. <b>Best Practice : </b> Before adding site make sure test it first.</li>
+        <li>5. Test Response will be displayed in the test response Box.</li>
+    </ul>
+</div>
+    </div>
+{#    <script src="https://cdn.jsdelivr.net/npm/json-formatter-js@9.0.0/dist/json-formatter.min.js"></script>#}
+    <script src="{{ url_for('static', filename='js/newmanage.js') }}"></script>
+
+    </body>
+</html>
+        

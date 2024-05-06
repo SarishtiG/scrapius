@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+         KubeScrape - Lets Automate the Scraping
+      </title>
+      {#
+      <link rel="stylesheet" href="login.css">
+      #}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+      <div class="main-content">
+         <section class="header">
+            <h2 class="logo">KubeScrape</h2>
+            <nav class="navigation">
+               <a href="#home">Home</a>
+{#               <a href="#about">About Us</a>#}
+               <a href="#contact">GitHub</a>
+               <button class="btnLogin-popup">Login</button>
+            </nav>
+         </section>
+         <section>
+            <div class="text-box">
+               <h1>Introducing Automated Scraping!!</h1>
+               <p>Scrap the web, shine like a star!</p>
+            </div>
+
+             <div class="fillScreen">
+                 <div class="wrapper">
+               <span class="icon-close">
+                  <ion-icon name="close"></ion-icon>
+               </span>
+               <div class="form-box login">
+                  <h2>Login</h2>
+                  <form action="/userLogin" method="post">
+                     <div class="input-box">
+                        <span class="icon">
+                           <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" name="mail" required>
+                        <label>Email</label>
+                     </div>
+                     <div class="input-box">
+                        <span class="icon">
+                           <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                     </div>
+                     <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                     </div>
+                     <button type="submit" class="btn">Login</button>
+                     <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                     </div>
+                  </form>
+               </div>
+               <div class="form-box register">
+                  <h2>Registration</h2>
+                  <form action="/userRegister" method="post">
+                     <div class="input-box">
+                        <span class="icon">
+                           <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" name="username" required>
+                        <label>Username</label>
+                     </div>
+                     <div class="input-box">
+                        <span class="icon">
+                           <ion-icon></ion-icon>
+                        </span>
+                        <input type="email" name="mail" required>
+                        <label>Email</label>
+                     </div>
+                     <div class="input-box">
+                        <span class="icon">
+                           <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" name="password" required>
+                        <label>Password</label>
+                     </div>
+                     <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                     </div>
+                     <button type="submit" class="btn">Register</button>
+                     <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+             </div>
+
+         </section>
+      </div>
+      <section class="home">
+    <div class="content">
+        <div class="left">
+            <h1>MORE<br>THAN<br>JUST<br><span class="red-text">SCRAPING</span></h1>
+        </div>
+        <div class="right">
+            <div id="lottie-container"></div>
+
+        </div>
+    </div>
+</section>
+{#      <section id="about" class="about">#}
+{#         <h1 id="devTitle">Developers</h1>#}
+{#         <div class="row">#}
+{#            <div class="about-col">#}
+{#               <img src="{{ url_for('static', filename='img/home1.png') }}">#}
+{#               <h3>Nikhil Kr. Gupta(nikzdevz)</h3>#}
+{#               <p>I took on a really cool project focused on automated scraping, diving into the worlds of both frontend and backend development. On the frontend side, I crafted a user-friendly interface using HTML, CSS, and JavaScript. At the same time, I got into Python and used Flask for the backend, making sure everything flowed smoothly for super-fast web apps. This hands-on work didn’t just improve my tech skills; it showed me how crucial it is to have the frontend and backend working together seamlessly for the best user experiences. It's what keeps me excited about creating innovative, tech-powered solutions.</p>#}
+{#            </div>#}
+{#            <div class="about-col">#}
+{#               <img src="{{ url_for('static', filename='img/home3.png') }}">#}
+{#               <h3>Shalini Yadav</h3>#}
+{#               <p>I wanted to level up my skills, so I tackled something new in this project. I mainly focused on backend development using Python and Flask. My key task was managing schema generation, which was super important for automating the scraping process. Getting into this really helped me grasp HTML, CSS, JSON, and XML better. It was a journey that not only improved my backend skills but also gave me a better handle on these crucial languages and formats needed for efficient scraping.</p>#}
+{#            </div>#}
+{#            <div class="about-col">#}
+{#               <img src="{{ url_for('static', filename='img/home.png') }}">#}
+{#               <h3>Sarishti Gupta</h3>#}
+{#               <p>I'm a dedicated front-end developer with a passion for turning ideas into captivating digital realities. My journey in web development has been a fusion of creativity and coding, where I specialize in transforming design concepts into interactive and user-focused websites. Proficient in HTML, CSS, and JavaScript, I leverage my expertise to build seamless, cross-browser experiences.</p>#}
+{#            </div>#}
+{#         </div>#}
+{#      </section>#}
+
+      <section id="githubSection">
+<h2>Open Source!!</h2>
+    <p>Our code is available at GitHub</p>
+
+    <div class="github-card">
+        <div class="inner-githubcard">
+            <img src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub Logo">
+            <div class="project-info">
+                <h3>nikzdevz/Scrapius</h3>
+                <p><a href="https://github.com/nikzdevz/Scrapius" target="_blank">https://github.com/nikzdevz/Scrapius</a></p>
+            </div>
+        </div>
+    </div>
+      </section>
+      {#        <script src="script.js"> </script>#}
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4/build/player/lottie.min.js"></script>
+
+   </body>
+</html>
